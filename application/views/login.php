@@ -19,11 +19,11 @@
       <h2 class="text-center mb-4 login-title">Login</h2>
       <form action="<?php echo base_url(); ?>index.php/auth/login" method="post">
         <div class="mb-3">
-          <label for="username" class="form-label login-label">Username</label>
+          <label for="username" class="form-label login-label">Usuario</label>
           <input type="text" class="form-control login-input" id="username" name="username" required>
         </div>
         <div class="mb-3 position-relative">
-          <label for="password" class="form-label login-label">Password</label>
+          <label for="password" class="form-label login-label">Contraseña</label>
           <div class="input-group">
             <input type="password" class="form-control login-input" id="password" name="password" required>
             <button type="button" class="btn position-absolute end-0 top-0 h-100 px-3" id="togglePasswordLogin" style="border: none; background: transparent;">
@@ -49,15 +49,15 @@
       <h2 class="text-center mb-4 login-title">Registro</h2>
       <form action="<?php echo base_url(); ?>index.php/auth/register" method="post">
         <div class="mb-3">
-          <label for="regUsername" class="form-label login-label">Username</label>
+          <label for="regUsername" class="form-label login-label">Usuario</label>
           <input type="text" class="form-control login-input" id="regUsername" name="regUsername" required>
         </div>
         <div class="mb-3">
-          <label for="regEmail" class="form-label login-label">Email</label>
+          <label for="regEmail" class="form-label login-label">Gmail</label>
           <input type="email" class="form-control login-input" id="regEmail" name="regEmail" required>
         </div>
         <div class="mb-3 position-relative">
-          <label for="regPassword" class="form-label login-label">Password</label>
+          <label for="regPassword" class="form-label login-label">Contraseña</label>
           <div class="input-group">
             <input type="password" class="form-control login-input" id="regPassword" name="regPassword" required>
             <button type="button" class="btn position-absolute end-0 top-0 h-100 px-3" id="togglePasswordRegister" style="border: none; background: transparent;">
@@ -65,7 +65,7 @@
             </button>
           </div>
         </div>
-        <button type="submit" class="btn w-100 login-button">Register</button>
+        <button type="submit" class="btn w-100 login-button">Registrar</button>
         <div class="text-center mt-3">
           <a href="#" id="showLoginForm" class="text-light text-decoration-none">¿Ya tienes una cuenta? Iniciar sesión</a>
         </div>

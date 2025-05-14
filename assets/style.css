@@ -1,7 +1,7 @@
 /* General Styles */
 nav {
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
   left: 0;
@@ -14,7 +14,7 @@ nav {
   box-sizing: border-box;
   color: white;
   font-family: Arial, sans-serif;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 10px rgba(122, 33, 173, 0.411); /* Sombra personalizada */
 }
 
 nav .logo {
@@ -40,43 +40,53 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #5AAD91;
+  color: rgba(180, 51, 255);
 }
 
-/* Fondo degradado animado para el body */
+/* Fondo con imagen para el body */
 body {
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #ff00cc, #3333ff, #00ffcc, #ff9900); /* Gradiente vibrante */
-  background-size: 400% 400%;
-  animation: cyberpunkFlow 10s ease infinite; /* Animación suave */
-  color: #ffffff; /* Texto blanco para contraste */
+  background: url('img/fondo5.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
 }
 
-/* Animación del gradiente */
-@keyframes cyberpunkFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+/* Cambia la imagen de fondo en pantallas pequeñas */
+@media (max-width: 768px) {
+  body {
+    background: url('img/fondo_responsive.png') no-repeat center center fixed;
+    background-size: cover;
   }
 }
 
 .section {
+  flex: 1 0 auto;
   min-height: 600px;
   background-color: rgba(255, 255, 255, 0);
   backdrop-filter: none;
-  margin-top: 20px; /* Ajusta el margen superior */
-  margin-bottom: 20px; /* Ajusta el margen inferior */
-  padding: 40px 20px; /* Mantén el relleno */
+  margin-top: 100px; /* Aumenta el margen superior para evitar que el header se sobreponga */
+  margin-bottom: 20px;
+  padding: 40px 20px;
   text-align: center;
   color: rgb(255, 255, 255);
+}
+
+/* Responsive: margen superior menor en móviles si lo necesitas */
+@media (max-width: 768px) {
+  .section {
+    margin-top: 90px;
+    padding: 25px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    margin-top: 70px;
+    padding: 15px 2px;
+  }
 }
 
 .section h1 {
@@ -92,21 +102,23 @@ body {
 }
 
 .card {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   padding: 20px;
   color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(122, 33, 173, 0.411); /* Sombra personalizada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(90, 173, 145, 0.3);
+  box-shadow: 0 8px 16px rgba(180, 51, 255); /* Sombra personalizada al hacer hover */
 }
 
 .card:hover i {
-  color: #5AAD91;
+  color: rgb(180, 51, 255);
 }
 
 .card-body {
@@ -144,7 +156,7 @@ body {
   border-radius: 20px;
   padding: 30px;
   color: #FFFFFF;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(122, 33, 173, 0.411); /* Sombra personalizada */
   border: 2px solid transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
@@ -153,7 +165,7 @@ body {
 
 .login-box:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 25px rgba(90, 173, 145, 0.5);
+  box-shadow: 0 0 25px rgba(180, 51, 255); /* Sombra personalizada */
 }
 
 .login-title {
@@ -177,14 +189,14 @@ body {
 
 .login-input:focus {
   outline: none;
-  border-color: #5AAD91;
+  border-color: rgba(180, 51, 255);
   background-color: rgba(255, 255, 255, 0.15);
 }
 
 .login-button {
-  background-color: #5AAD91;
+  background-color: rgba(122, 33, 173, 0.411);
   border: none;
-  color: #000;
+  color: #ffffff;
   font-weight: bold;
   padding: 10px;
   border-radius: 10px;
@@ -192,8 +204,23 @@ body {
 }
 
 .login-button:hover {
-  background-color: #489878;
+  background-color: rgba(180, 51, 255);
   color: #fff;
+}
+
+/* Mejora la visibilidad del botón para mostrar/ocultar contraseña */
+#togglePasswordLogin,
+#togglePasswordRegister {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0) !important;
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+}
+
+#togglePasswordLogin:hover,
+#togglePasswordRegister:hover {
+  background: rgba(255,255,255,0.0) !important;
+  color: #ffffff !important;
 }
 
 /* Responsive Styles */
@@ -330,16 +357,16 @@ body {
 
   /* Ajuste para pantallas pequeñas */
   .section {
-    margin-top: -25px; /* Reduce el margen superior */
+    margin-top: 50px; /* Reduce el margen superior */
   }
-}
-
 /* Footer Styles */
 footer {
+  flex-shrink: 0;
   margin-top: auto;
   background-color: #333;
   color: #fff;
   padding: 20px 0;
+  box-shadow: 0px -4px 10px rgba(122, 33, 173, 0.411); /* Sombra personalizada superior */
 }
 
 footer a {
@@ -349,4 +376,4 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
-}
+}}

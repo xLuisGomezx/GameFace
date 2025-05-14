@@ -20,4 +20,10 @@ class redireccion extends CI_Controller
         $this->load->view('login');
         $this->load->view('footer');
     }
+    public function equipo()
+    {
+        $this->load->view('header');
+        $this->load->view('equipo');
+        $this->load->view('footer');
+    }
 }

@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <p class="mb-2">&copy; 2025 - GhostSystem</p>
+          <p class="mb-2"><a href="<?php echo base_url(); ?>index.php/redireccion/equipo">&copy; 2025 - GhostSystem</a></p>
           <p>
             <a href="#" class="text-light text-decoration-none">Privacy</a> &middot; 
             <a href="#" class="text-light text-decoration-none">Terms</a>

@@ -18,8 +18,7 @@
     </div>
     <ul>
         <li><a href="<?php echo base_url(); ?>index.php/redireccion/inicio">INICIO</a></li>
-        <li><a href="<?php echo base_url(); ?>index.php/redireccion/torneos">EXPLORAR</a></li>
-        <li><a href="">CREAR</a></li>
+        <li><a href="<?php echo base_url(); ?>index.php/redireccion/torneos">TORNEOS</a></li>
         <li><a href="<?php echo base_url(); ?>index.php/redireccion/login"><i class="fa fa-user"></i></a></li>
     </ul>
   </nav>
