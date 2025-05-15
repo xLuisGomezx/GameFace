@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <!-- Perfil 5 -->
+        <!-- El que lo lea es gay -->
         <div class="col-lg-2 col-md-4 col-sm-6">
             <div class="card">
                 <i class="fa fa-shield-alt"></i>
@@ -61,4 +61,3 @@
     </div>
   </div>
 </body>
-
